@@ -1,4 +1,4 @@
-<h1>Sigma-Delta Design with CBADC (IMSE 2025) 🎛</h1>
+<h1> 🎛 Sigma-Delta Design with CBADC (IMSE 2025)</h1>
 
 <p>This Python toolset enables the design and simulation of advanced data conversion systems, focusing on mixed-signal architectures and filter implementations. Leveraging modern Python libraries, it provides tools for modeling and optimizing high-performance analog-to-digital conversion systems.</p>
 
