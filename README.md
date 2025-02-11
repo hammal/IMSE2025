@@ -1,4 +1,4 @@
-<h1>Sigma Delta Design with CBADC (IMSE 2025) 🎛</h1>
+<h1>Sigma-Delta Design with CBADC (IMSE 2025) 🎛</h1>
 
 <p>This Python toolset enables the design and simulation of advanced data conversion systems, focusing on mixed-signal architectures and filter implementations. Leveraging modern Python libraries, it provides tools for modeling and optimizing high-performance analog-to-digital conversion systems.</p>
 
@@ -18,7 +18,7 @@
 
 <h2 id="overview">📄 Overview</h2>
 
-<p>This project provides a Python-based environment, using Jupyter notebooks, for designing and simulating Continuous-Time Binary-weighted ADC (CBADC) and traditional Sigma-Delta architectures. Expanding upon Schreier's established MATLAB toolbox, it extends  capabilities for both continuous-time and discrete-time designs, with emphasis on practical circuit-level considerations.</p>
+<p>This project provides a Python-based environment, using Jupyter notebooks, for designing and simulating Continuous-Time Binary-weighted ADC (CBADC) and traditional Sigma-Delta architectures. Expanding upon Schreier's established MATLAB toolbox, it extends the  capabilities for both continuous-time and discrete-time designs, with emphasis on practical circuit-level considerations.</p>
 
 
 <h2 id="features">✨ Features</h2>
@@ -32,7 +32,7 @@
     </tr>
     <tr>
       <td>Python-based Delta Sigma Modulator Design</td>
-      <td>Python code base for simulating and designing delta sigma modulators, including continuous-time (CT) and discrete-time (DT) filters, built upon Schreier's MATLAB toolbox for SDM tasks.</td>
+      <td>Python codebase for simulating and designing Sigma-Delta modulators, including continuous-time (CT) and discrete-time (DT) filters, built upon Schreier's MATLAB toolbox for SDM tasks.</td>
     </tr>
     <tr>
       <td>Environment Setup</td>
@@ -40,7 +40,7 @@
     </tr>
     <tr>
       <td>CBADC Package Installation</td>
-      <td>Direct GitHub installation of cbadc Python package for delta sigma modulator design and analysis, with current features.</td>
+      <td>Direct GitHub installation of CBADC Python package for Sigma-Delta modulator design and analysis, with current features.</td>
     </tr>
     <tr>
       <td>Visualization with QR Code</td>
@@ -52,7 +52,7 @@
     </tr>
     <tr>
       <td>State-Space Realization of NTF</td>
-      <td>NTF implementation in discrete-time and continuous-time architectures through cb.delsig.realizeNTF function.</td>
+      <td>NTF implementation for both discrete-time and continuous-time architectures using the cb.delsig.realizeNTF function.</td>
     </tr>
     <tr>
       <td>Continuous-Time Architecture Synthesis</td>
@@ -93,7 +93,7 @@ source imse2025/bin/activate  # On Unix/macOS
 .\imse2025\Scripts\activate  # On Windows</code></pre>
 </code></pre>
 
-4. Dependencies Installation:
+4. Installing Dependencies:
 
 <pre><code>python -m pip install --upgrade pip ipykernel jupyterlab && \
 python -m ipykernel install --user --name=imse2025 --display-name "imse 2025"
@@ -103,7 +103,7 @@ python -m ipykernel install --user --name=imse2025 --display-name "imse 2025"
 
 <pre><code>python -m pip install git+https://github.com/hammal/cbadc.git@feature/0.4.0</code></pre>
 
-<small>If the above command fails due to versioning or compatibility issues, install CBADC manually:</small>
+<small>If the command above fails due to versioning or compatibility issues, install CBADC manually:</small>
 
 <pre><code>git clone https://github.com/hammal/cbadc.git
 cd cbadc
@@ -138,7 +138,7 @@ ntf0 = cb.delsig.synthesizeNTF(order, osr, 2, Hinf, f0)</code></pre>
 
 <h3>Implementing Different Architectures</h3>
 
-<p>Below are implementations of various continuous-time SDM architectures.</p>
+<p>Below are implementations of various continuous-time Sigma-Delta modulator architectures.</p>
 
 <h3>Continuous-Time SDM</h3>
 
@@ -204,7 +204,7 @@ ct_analog_frontend.dt = 1.0/fs</code></pre>
 <ul>
   <li><strong>Advanced Simulation Reporting:</strong> Provides enhanced details for maximum currents, voltages, and performance metrics.</li>
   <li><strong>Expanded Model Library:</strong> Incorporates best practices from leading simulation models, expanding the range of available options.</li>
-  <li><strong>FIR DAC Support:</strong> The feature has been implemented, though it is currently experiencing a bug, which is expected to be resolved soon.</li>
+  <li><strong>FIR DAC Support:</strong> This feature has been implemented but currently has a bug, which is expected to be resolved soon.</li>
   <li><strong>Refined Parametrization:</strong> Ongoing work on GmC and activeRC, with comprehensive documentation being developed.</li>
   <li><strong>MASH Design Flow:</strong> Focused on streamlining the design process with a more intuitive and efficient flow.</li>
   <li><strong>Pipeline Design Flow:</strong> Efforts are underway to create a more robust and seamless pipeline for the design process.</li>
@@ -218,5 +218,5 @@ ct_analog_frontend.dt = 1.0/fs</code></pre>
 
 <h2 id="license">📝 License</h2>
 
-<p>This project is licensed under the GNU General Public License, Version 3, 29 June 2007. Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. You can read the full license on the <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GNU website</a>.</p>
+<p>This project is licensed under the GNU General Public License, Version 3, 29 June 2007. Everyone is permitted to copy and distribute exact copies of this license document, but modifications are not allowed. You can read the full license on the <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GNU website</a>.</p>
 
