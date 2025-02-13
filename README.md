@@ -1,7 +1,6 @@
-<h1> 🎛 Sigma-Delta Design with CBADC (IMSE 2025)</h1>
+<h1> 🎛 Sigma-Delta Design with control-bounded ADCs (CBADCs) (IMSE 2025)</h1> 
 
 <p>This Python toolset enables the design and simulation of advanced data conversion systems, focusing on mixed-signal architectures and filter implementations. Leveraging modern Python libraries, it provides tools for modeling and optimizing high-performance analog-to-digital conversion systems.</p>
-
 
 
 <!-- Navigation Menu (Table of Contents) -->
@@ -18,7 +17,7 @@
 
 <h2 id="overview">📄 Overview</h2>
 
-<p>This project provides a Python-based environment, using Jupyter notebooks, for designing and simulating Continuous-Time Binary-weighted ADC (CBADC) and traditional Sigma-Delta architectures. Expanding upon Schreier's established MATLAB toolbox, it extends the  capabilities for both continuous-time and discrete-time designs, with emphasis on practical circuit-level considerations.</p>
+<p>This project provides a Python-based environment, using Jupyter notebooks, for designing and simulating Continuous-Time control-bounded ADCs (CBADCs) and traditional Sigma-Delta architectures. Expanding upon Schreier's established MATLAB toolbox, it extends the  capabilities for both continuous-time and discrete-time designs, with emphasis on practical circuit-level considerations.</p>
 
 
 <h2 id="features">✨ Features</h2>
@@ -48,7 +47,7 @@
     </tr>
     <tr>
       <td>Sigma-Delta Modulator Design</td>
-      <td>Core parameters include bandwidth (Bw), oversampling ratio (osr), and filter order for SDM synthesis via cb.delsig.synthesizeNTF function.</td>
+      <td>Core parameters include bandwidth (Bw), oversampling ratio (OSR), and filter order for SDM synthesis via cb.delsig.synthesizeNTF function.</td>
     </tr>
     <tr>
       <td>State-Space Realization of NTF</td>
@@ -126,15 +125,15 @@ import matplotlib.pyplot as plt
 
 # Define system parameters
 order = 3
-osr = 32
+OSR  = 32
 nlev = 2
 f0 = 0.
 Hinf = 1.5
 Bw = 10e6
-fs = Bw * osr * 2
+fs = Bw * OSR  * 2
 
 # Synthesize NTF
-ntf0 = cb.delsig.synthesizeNTF(order, osr, 2, Hinf, f0)</code></pre>
+ntf0 = cb.delsig.synthesizeNTF(order, OSR, 2, Hinf, f0)</code></pre>
 
 <h3>Implementing Different Architectures</h3>
 
